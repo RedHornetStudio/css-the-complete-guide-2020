@@ -34,6 +34,67 @@ body {
   vertical-align: middle;
 }
 
+.plan--highlited {
+  background: #19b84c;
+  color: white;
+  box-shadow: 2px 2px 5px 2px #00000048;
+}
+
+.plan__annotation {
+  background: white;
+  color: #19b84c;
+  padding: 10px 0px;
+  box-shadow: 2px 2px 5px 2px #00000048;
+  border-radius: 5px;
+}
+
+.plan__title {
+  color: #0e4f1f;
+}
+
+.plan__price {
+  color: #858585;
+}
+
+.plan--highlited .plan__title {
+  color: white;
+}
+
+.plan--highlited .plan__price {
+  color: #0e4f1f;
+}
+
+.plan__features {
+  list-style-type: none;
+  padding: 0px;
+  margin: 0px;
+}
+
+.plan__feature {
+  margin: 8px 0px;
+}
+
+.button {
+  background: #0e4f1f;
+  color: white;
+  font: inherit;
+  border: 1.5px solid #0e4f1f;
+  padding: 8px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.button:hover,
+.button:active {
+  background: white;
+  color: #0e4f1f;
+}
+
+.clicking .button:focus {
+  outline: none;
+}
+
 /* h1 {
   font-family: sans-serif;
 } */
