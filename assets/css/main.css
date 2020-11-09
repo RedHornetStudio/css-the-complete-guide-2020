@@ -24,6 +24,10 @@ body {
   font-family: 'Anton', sans-serif;
 }
 
+.plan-container {
+  text-align: center;
+}
+
 .plan {
   background: #d5ffdc;
   text-align: center;
@@ -93,6 +97,48 @@ body {
 
 .clicking .button:focus {
   outline: none;
+}
+
+#key-features {
+  background: #ff1b68;
+  margin-top: 80px;
+  padding: 16px;
+}
+
+#key-features .section-title {
+  color: white;
+  margin: 32px 0px;
+}
+
+.key-features__list {
+  margin: 0px;
+  padding: 0px;
+  list-style-type: none;
+  text-align: center;
+}
+
+.key-feature {
+  display: inline-block;
+  width: 30%;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  vertical-align: top;
+}
+
+.key-feature__image {
+  width: 128px;
+  height: 128px;
+  background: #ffcede;
+  margin: 0 auto;
+  border: 2px solid #424242;
+  border-radius: 50%;
+}
+
+.key-feature__description {
+  color: white;
+  font-weight: bold;
+  text-align: center;
 }
 
 /* h1 {
