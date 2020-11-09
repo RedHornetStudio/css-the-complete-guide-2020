@@ -1,3 +1,5 @@
+console.log('aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa');
+
 const body = document.querySelector('body');
 
 document.addEventListener('mousedown', () => {
