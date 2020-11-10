@@ -15,7 +15,9 @@
   font-family: 'Anton', sans-serif;
 }
 
-.plan-container {
+.plan__list {
+  width: 80%;
+  margin: auto;
   text-align: center;
 }
 

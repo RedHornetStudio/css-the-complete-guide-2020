@@ -1,0 +1,1 @@
+(()=>{const e=document.querySelector("body");document.addEventListener("mousedown",(()=>{e.classList.add("clicking")})),document.addEventListener("keydown",(d=>{"Tab"===d.key&&e.classList.remove("clicking")}))})();
