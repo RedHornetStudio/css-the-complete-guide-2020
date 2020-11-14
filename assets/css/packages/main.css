@@ -2,7 +2,9 @@
   position: fixed;
   width: 100%;
   height: 100%;
-  background-image: url("../../img/packages/plans-background.jpg");
+  background: url("../../img/packages/plans-background.jpg") center / cover;
+  filter: grayscale(40%);
+  filter: blur(1px);
   z-index: -1;
 }
 
