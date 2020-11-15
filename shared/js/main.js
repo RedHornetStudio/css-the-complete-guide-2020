@@ -26,28 +26,32 @@ backdrop.addEventListener('click', () => {
   // modal.style.display = 'none';
   // mobileNav.style.display = 'none';
   backdrop.classList.remove('open');
-  modal.classList.remove('open');
+  if(modal) {
+    modal.classList.remove('open');
+  }
   mobileNav.classList.remove('open');
 })
 
 // show modal
-planList.addEventListener('click', e => {
-  if(e.target.classList.contains('button')) {
-    // backdrop.style.display = 'block';
-    // modal.style.display = 'block';
-    backdrop.classList.add('open');
-    modal.classList.add('open');
-  }
-});
+if(planList) {
+  planList.addEventListener('click', e => {
+    if(e.target.classList.contains('button')) {
+      // backdrop.style.display = 'block';
+      // modal.style.display = 'block';
+      backdrop.classList.add('open');
+      modal.classList.add('open');
+    }
+  });
 
-modal.addEventListener('click', e => {
-  if(e.target.classList.contains('modal__action--negative')) {
-    // backdrop.style.display = 'none';
-    // modal.style.display = 'none';
-    backdrop.classList.remove('open');
-    modal.classList.remove('open');
-  }
-});
+  modal.addEventListener('click', e => {
+    if(e.target.classList.contains('modal__action--negative')) {
+      // backdrop.style.display = 'none';
+      // modal.style.display = 'none';
+      backdrop.classList.remove('open');
+      modal.classList.remove('open');
+    }
+  });
+}
 
 // mobile menu
 toggleButton.addEventListener('click', () => {
