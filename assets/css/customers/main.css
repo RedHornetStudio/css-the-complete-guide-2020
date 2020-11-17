@@ -1,3 +1,7 @@
+main {
+  padding: 2rem 0;
+}
+
 .testimonial {
   font-size: 1.2rem;
 }
@@ -6,10 +10,6 @@
   width: 80%;
   margin: auto;
 } */
-
-.testimonial:first-of-type {
-  margin-top: 6rem;
-}
 
 .testimonial__image-container {
   width: 100%;
@@ -63,8 +63,15 @@
 
 @media (min-width: 40rem) {
   .testimonial {
-    margin: 3rem auto;
+    margin-right: auto;
+    margin-left: auto;
     max-width: 93rem;
+  }
+
+  #customer-2.testimonial {
+    text-align: right;
+    margin-top: 2rem;
+    overflow: hidden;
   }
 
   .testimonial__image-container {
