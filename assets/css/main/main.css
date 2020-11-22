@@ -88,19 +88,26 @@
 
 @media (min-width: 40rem) {
   .plan__list {
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .plan {
-    display: inline-block;
     width: 30%;
-    vertical-align: middle;
     min-width: 12.5rem;
     max-width: 25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0;
+    height: 28rem;
   }
 
   .plan--highlited {
     box-shadow: 2px 2px 5px 2px #00000048;
+    z-index: 50;
+    height: 30rem;
   }
 }
 
@@ -141,19 +148,15 @@
 @media (min-width: 40rem) {
   .key-features__list {
     text-align: center;
+    display: flex;
+    justify-content: center;
   }
 
   .key-feature {
-    display: inline-block;
     width: 30%;
     max-width: 25rem;
-    vertical-align: top;
   }
 }
-
-/* h1 {
-  font-family: sans-serif;
-} */
 
 .modal {
   position: fixed;

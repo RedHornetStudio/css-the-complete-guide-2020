@@ -66,23 +66,20 @@ main {
     margin-right: auto;
     margin-left: auto;
     max-width: 93rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
   }
 
   #customer-2.testimonial {
-    text-align: right;
     margin-top: 2rem;
-    overflow: hidden;
   }
 
   .testimonial__image-container {
     width: 66%;
-    display: inline-block;
-    vertical-align: middle;
   }
 
   .testimonial__info {
-    display: inline-block;
-    vertical-align: middle;
     width: 30%;
   }
 }
