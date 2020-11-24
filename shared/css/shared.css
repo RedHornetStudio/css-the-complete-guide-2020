@@ -17,20 +17,27 @@
   box-sizing: border-box;
 }
 
+html {
+  height: 100%;
+}
+
 body {
   font-family: 'Montserrat', sans-serif;
   margin: 0;
+  display: grid;
+  grid-template-rows: 3.5rem auto fit-content(0);
+  height: 100%;
 }
 
 main {
-  margin-top: 3.5rem;
-  min-height: calc(100vh - 12.5rem);
+  grid-row: 2 / span 1;
 }
 
 @media (min-width: 40rem) {
-  main {
-    min-height: calc(100vh - 10.5rem);
-  }
+body {
+  
+}
+
 }
 
 .backdrop {
@@ -185,6 +192,7 @@ main {
 .main-footer {
   background: black;
   padding: 2rem;
+  grid-row: 3 / span 1;
 }
 
 .main-footer__links {
