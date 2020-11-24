@@ -4,6 +4,7 @@ const modal = document.querySelector('.modal');
 const planList = document.querySelector('.plan__list');
 const toggleButton = document.querySelector('.toggle-button');
 const mobileNav = document.querySelector('.mobile-nav');
+const ctaButton = document.querySelector('.main-nav__item--cta');
 
 // code to hide outline while clicking
 document.addEventListener('mousedown', () => {
@@ -22,31 +23,32 @@ window.addEventListener('keydown', e => {
 
 // backdrop
 backdrop.addEventListener('click', () => {
-  // backdrop.style.display = 'none';
-  // modal.style.display = 'none';
-  // mobileNav.style.display = 'none';
+  backdrop.style.display = 'none';
+  mobileNav.classList.remove('open');
+  setTimeout(() => {
+    mobileNav.style.display = 'none';
+  }, 500)
   backdrop.classList.remove('open');
   if(modal) {
     modal.classList.remove('open');
   }
-  mobileNav.classList.remove('open');
 })
 
 // show modal
 if(planList) {
   planList.addEventListener('click', e => {
     if(e.target.classList.contains('button')) {
-      // backdrop.style.display = 'block';
-      // modal.style.display = 'block';
-      backdrop.classList.add('open');
+      backdrop.style.display = 'block';
+      setTimeout(() => {
+        backdrop.classList.add('open');
+      }, 1)
       modal.classList.add('open');
     }
   });
 
   modal.addEventListener('click', e => {
     if(e.target.classList.contains('modal__action--negative')) {
-      // backdrop.style.display = 'none';
-      // modal.style.display = 'none';
+      backdrop.style.display = 'none';
       backdrop.classList.remove('open');
       modal.classList.remove('open');
     }
@@ -55,8 +57,22 @@ if(planList) {
 
 // mobile menu
 toggleButton.addEventListener('click', () => {
-  // mobileNav.style.display = 'block';
-  // backdrop.style.display = 'block';
-  backdrop.classList.add('open');
-  mobileNav.classList.add('open');
+  backdrop.style.display = 'block';
+  mobileNav.style.display = 'block';
+  setTimeout(() => {
+    backdrop.classList.add('open');
+    mobileNav.classList.add('open');
+  }, 1)
+});
+
+ctaButton.addEventListener('animationstart', e => {
+  console.log('Animation started', e);
+});
+
+ctaButton.addEventListener('animationend', e => {
+  console.log('Animation ended', e);
+});
+
+ctaButton.addEventListener('animationiteration', e => {
+  console.log('Animation iteration', e);
 });

@@ -33,15 +33,9 @@ main {
   grid-row: 2 / span 1;
 }
 
-@media (min-width: 40rem) {
-body {
-  
-}
-
-}
-
 .backdrop {
   display: none;
+  opacity: 0;
   position: fixed;
   top: 0;
   left: 0;
@@ -131,6 +125,10 @@ body {
   border-bottom: 5px solid white;
 }
 
+.main-nav__item--cta {
+  animation: wiggle 400ms 3s 5 linear forwards;
+}
+
 .main-nav__item--cta a,
 .mobile-nav__item--cta a {
   color: white;
@@ -160,6 +158,8 @@ body {
 
 .mobile-nav {
   display: none;
+  transform: translate(-100%);
+  transition: opacity 500ms ease-out, transform 500ms ease-out;
   position: fixed;
   z-index: 101;
   top: 0;
@@ -249,4 +249,26 @@ body {
 
 .open {
   display: block !important;
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+  transition: opacity 500ms ease-out, transform 500ms ease-out;
+}
+
+@keyframes wiggle {
+  0% {
+    transform: rotateZ(0);
+  }
+  25% {
+    transform: rotateZ(-10deg);
+  }
+  50% {
+    transform: rotateZ(10deg);
+  }
+  75% {
+    transform: rotateZ(-10deg);
+  }
+  100% {
+    transform: rotateZ(0deg);
+  }
+  
 }
