@@ -12,6 +12,10 @@
   font-weight: 900;
 }
 
+:root {
+  --dark-green: #0e4f1f;
+  --highlight-color: #ff1b68;
+}
 
 * {
   box-sizing: border-box;
@@ -24,9 +28,16 @@ html {
 body {
   font-family: 'Montserrat', sans-serif;
   margin: 0;
-  display: grid;
-  grid-template-rows: 3.5rem auto fit-content(0);
-  height: 100%;
+  padding-top: 3.5rem;
+}
+
+@supports (display: grid) {
+  body {
+    display: grid;
+    grid-template-rows: 3.5rem auto fit-content(0);
+    padding-top: 0;
+    height: 100%;
+  }
 }
 
 main {
@@ -53,6 +64,9 @@ main {
   background: #2ddf5c;
   padding: 0.5rem 1rem;
   z-index: 60;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -114,7 +128,7 @@ main {
 .main-nav__item a,
 .mobile-nav__item a {
   text-decoration: none;
-  color: #0e4f1f;
+  color: var(--dark-green);
   font-weight: bold;
   padding: 0.2rem 0;
 }
@@ -132,7 +146,7 @@ main {
 .main-nav__item--cta a,
 .mobile-nav__item--cta a {
   color: white;
-  background: #ff1b68;
+  background: var(--highlight-color);
   padding: 0.5rem 1rem;
   border-radius: 8px;
 }
@@ -141,7 +155,7 @@ main {
 .main-nav__item--cta a:active,
 .mobile-nav__item--cta a:hover,
 .mobile-nav__item--cta a:active {
-  color: #ff1b68;
+  color: var(--highlight-color);
   background: white;
   border: none;
 }
@@ -227,10 +241,10 @@ main {
 }
 
 .button {
-  background: #0e4f1f;
+  background: var(--dark-green);
   color: white;
   font: inherit;
-  border: 1.5px solid #0e4f1f;
+  border: 1.5px solid var(--dark-green);
   padding: 0.5rem;
   border-radius: 8px;
   font-weight: bold;
@@ -240,7 +254,7 @@ main {
 .button:hover,
 .button:active {
   background: white;
-  color: #0e4f1f;
+  color: var(--dark-green);
 }
 
 .clicking .button:focus {
