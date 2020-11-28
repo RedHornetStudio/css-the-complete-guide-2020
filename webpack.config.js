@@ -3,14 +3,14 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
   entry: {
-    'main': './sass-example/src/js/index.js',
+    'main': './examples/sass-example/src/js/index.js',
   },
   output: {
-    path: path.resolve(__dirname, 'sass-example'),
+    path: path.resolve(__dirname, 'examples/sass-example'),
     filename: '[name].bundle.js'
   },
   devServer: {
-    contentBase: path.resolve(__dirname, 'sass-example')
+    contentBase: path.resolve(__dirname, 'examples/sass-example')
   },
   module: {
     rules: [
